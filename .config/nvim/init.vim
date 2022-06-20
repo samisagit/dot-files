@@ -7,6 +7,7 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'tpope/vim-vinegar'
 Plug 'unblevable/quick-scope'
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'vim-test/vim-test'
 call plug#end()
 
 " change highlighting of cursor line when entering/leaving Insert Mode
@@ -56,4 +57,5 @@ nnoremap <leader>w :w<CR>
 nnoremap <leader>e :lua vim.diagnostic.open_float()<CR>
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
+nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> <leader>l :TestLast<CR>
