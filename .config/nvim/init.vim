@@ -37,6 +37,8 @@ lspconfig.hls.setup{
   		}
 	}
 }
+
+lspconfig.gopls.setup{}
 EOF
 
 " set hybrid numbers
