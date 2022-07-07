@@ -1,0 +1,15 @@
+#!/bin/sh
+
+{
+tmux a -t sesh
+} ||
+{
+tmux new -d -s sesh
+tmux new-window -t sesh:1
+tmux new-window -t sesh:2
+
+tmux rename-window -t sesh:0 'code'
+tmux rename-window -t sesh:1 'test'
+tmux rename-window -t sesh:2 'misc'
+tmux a -t sesh
+}
