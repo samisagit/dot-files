@@ -9,6 +9,7 @@ Plug 'unblevable/quick-scope'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'vim-test/vim-test'
 Plug 'dense-analysis/ale'
+Plug 'takac/vim-hardtime'
 call plug#end()
 
 " change highlighting of cursor line when entering/leaving Insert Mode
@@ -64,3 +65,6 @@ inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 nmap <silent> <leader>t :TestNearest<CR>
 nmap <silent> <leader>l :TestLast<CR>
+
+" make bad habits harder
+let g:hardtime_default_on = 1

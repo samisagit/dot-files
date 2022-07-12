@@ -100,8 +100,25 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-#[ -f "/home/sam/.ghcup/env" ] && source "/home/sam/.ghcup/env" # ghcup-env
 
- [ -f "/home/$USER/.ghcup/env" ] && source "/home/$USER/.ghcup/env" 
+PATH=/home/$USER/bin:$PATH
+PATH=/home/$USER/.bin/fvm:$PATH
+PATH=/home/$USER/.bin:$PATH
+
+[ -f "/home/$USER/.ghcup/env" ] && source "/home/$USER/.ghcup/env" 
+
+[[ -s "/home/$USER/.gvm/scripts/gvm" ]] && source "/home/$USER/.gvm/scripts/gvm"
+[[ -s "/home/$USER/.gvm/scripts/gvm" ]] gvm use go1.17.6
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+[ -s "$NVM_DIR" ] && nvm use 16.13.1 
+
+[ -s "/home/$USER/fvm" ] && fvm use 3.0.0
+
 export EDITOR=nvim
+export GIT_EDITOR=nvim
 alias vim=nvim
+
+
