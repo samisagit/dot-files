@@ -8,6 +8,7 @@ Plug 'tpope/vim-vinegar'
 Plug 'unblevable/quick-scope'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'vim-test/vim-test'
+Plug 'dense-analysis/ale'
 call plug#end()
 
 " change highlighting of cursor line when entering/leaving Insert Mode
@@ -16,16 +17,16 @@ highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=233 guifg=NONE guibg=#12121
 autocmd InsertEnter * highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=234 guifg=NONE guibg=#1c1c1c
 autocmd InsertLeave * highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=233 guifg=NONE guibg=#121212
 
-" set quick-scope colors
-highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
-highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
-
 " format .hs files on save
 autocmd BufWritePre *.hs lua vim.lsp.buf.formatting_sync()
 
 " colorscheme
 set background=dark
 colorscheme PaperColor
+
+" set quick-scope colors
+highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
+highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
 
 " LSP configs
 lua << EOF
@@ -40,6 +41,8 @@ lspconfig.hls.setup{
 
 lspconfig.gopls.setup{}
 EOF
+
+let g:ale_linters = {'haskell': ['hlint']}
 
 " set hybrid numbers
 set nu rnu
