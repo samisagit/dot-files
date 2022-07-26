@@ -10,6 +10,7 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'vim-test/vim-test'
 Plug 'dense-analysis/ale'
 Plug 'takac/vim-hardtime'
+Plug 'mhinz/vim-startify'
 call plug#end()
 
 " change highlighting of cursor line when entering/leaving Insert Mode
