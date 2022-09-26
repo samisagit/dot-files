@@ -66,6 +66,3 @@ inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 nmap <silent> <leader>t :TestNearest<CR>
 nmap <silent> <leader>l :TestLast<CR>
-
-" make bad habits harder
-let g:hardtime_default_on = 1
