@@ -9,7 +9,6 @@ Plug 'unblevable/quick-scope'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'vim-test/vim-test'
 Plug 'dense-analysis/ale'
-Plug 'takac/vim-hardtime'
 Plug 'mhinz/vim-startify'
 call plug#end()
 
@@ -34,6 +33,7 @@ highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=und
 lua << EOF
 lspconfig = require "lspconfig"
 lspconfig.hls.setup{
+lspconfig.terraformls.setup{}
 	settings = {
 		haskell = {
     			formattingProvider = "stylish-haskell"
