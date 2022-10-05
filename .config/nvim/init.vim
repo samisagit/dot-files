@@ -32,8 +32,8 @@ highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=und
 " LSP configs
 lua << EOF
 lspconfig = require "lspconfig"
-lspconfig.hls.setup{
 lspconfig.terraformls.setup{}
+lspconfig.hls.setup{
 	settings = {
 		haskell = {
     			formattingProvider = "stylish-haskell"
