@@ -49,6 +49,8 @@ let g:ale_linters = {'haskell': ['hlint']}
 " set hybrid numbers
 set nu rnu
 
+set shell=/usr/bin/zsh
+
 " set leader mappings
 let mapleader=" "
 nnoremap <leader>S :lua vim.lsp.buf.signature_help()<CR>
