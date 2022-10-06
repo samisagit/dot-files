@@ -105,6 +105,7 @@ PATH=/home/$USER/bin:$PATH
 PATH=/home/$USER/.bin/fvm:$PATH
 PATH=/home/$USER/.bin/camunda:$PATH
 PATH=/home/$USER/.bin:$PATH
+PATH=/usr/local/go/bin:$PATH
 
 [ -f "/home/$USER/.ghcup/env" ] && source "/home/$USER/.ghcup/env" 
 
@@ -116,8 +117,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 [ -s "$NVM_DIR" ] && nvm use 16.13.1 
 
-export EDITOR=nvim
-export GIT_EDITOR=nvim
-alias vim=nvim
-
+export EDITOR=dvim
+export GIT_EDITOR=dvim
 
